@@ -1,16 +1,16 @@
 n, m = map(int, input().split())
 
-s = []
-def f():
-  if len(s) == m:
-    print(' '.join(map(str, s)))
+case = []
+def recursive():
+  if len(case) == m:
+    print(' '.join(map(str, case)))
     return
 
   for i in range(1, n + 1):
-    if i in s:
+    if i in case:
       continue
-    s.append(i)
-    f()
-    s.pop()
+    case.append(i)
+    recursive()
+    case.pop()
 
-f()
+recursive()
