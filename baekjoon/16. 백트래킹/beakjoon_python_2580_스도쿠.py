@@ -32,7 +32,7 @@ def doSudoku(x):
         
     else:    
         (i, j) = zeros[x]
-        candidate = isPromising(i, j) #유망한 숫자들을 받음
+        candidate = isPromising(i, j)
         for num in candidate:
             sudoku[i][j] = num
             doSudoku(x + 1) 
